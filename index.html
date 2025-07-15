@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: url('D:\\3RD YEAR - 1ST SEM\\435e0182949f07f3918a6b9a559c74dd.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 3px solid green;
+            width: 35%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        @media (min-width: 900px) {
+            .container {
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <img src="dazai.jpg" alt="Logo">
+    </div>
+
+    <form id="surveyForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email">
+
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" placeholder="Enter your age">
+
+        <label for="describe">Which option best describes you?</label>
+        <select id="describe" name="describe">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+        </select>
+
+        <label for="recommend">Would you recommend to a friend?</label><br>
+        <input type="radio" id="yes" name="recommend" value="Yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="recommend" value="No">
+        <label for="no">No</label><br>
+        <input type="radio" id="maybe" name="recommend" value="Maybe">
+        <label for="maybe">Maybe</label><br><br>
+
+        <label for="known">Languages and Framework known (Check all that apply)</label><br>
+        <input type="checkbox" id="c" name="known" value="C">
+        <label for="c">C</label><br>
+        <input type="checkbox" id="c++" name="known" value="C++">
+        <label for="c++">C++</label><br>
+        <input type="checkbox" id="c#" name="known" value="C#">
+        <label for="c#">C#</label><br>
+        <input type="checkbox" id="java" name="known" value="Java">
+        <label for="java">Java</label><br>
+        <input type="checkbox" id="python" name="known" value="Python">
+        <label for="python">Python</label><br>
+        <input type="checkbox" id="javascript" name="known" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+        <input type="checkbox" id="react" name="known" value="React">
+        <label for="react">React</label><br>
+        <input type="checkbox" id="angular" name="known" value="Angular">
+        <label for="angular">Angular</label><br>
+        <input type="checkbox" id="django" name="known" value="Django">
+        <label for="django">Django</label><br>
+        <input type="checkbox" id="spring" name="known" value="Spring">
+        <label for="spring">Spring</label><br><br>
+
+        <p><label for="comments">Any comments or suggestions</label></p>
+        <textarea id="comments" name="comments"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+    <div id="result"></div>
+</div>
+
+</body>
+</html>
